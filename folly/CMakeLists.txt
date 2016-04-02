@@ -1,0 +1,140 @@
+#
+# Copyright (C) 2015, Yeolar
+#
+
+set(FOLLY_BASE_SRCS
+    Benchmark.cpp
+    Bits.cpp
+    Conv.cpp
+    Demangle.cpp
+    dynamic.cpp
+    File.cpp
+    FileUtil.cpp
+    Format.cpp
+    GroupVarint.cpp
+    IPAddress.cpp
+    IPAddressV4.cpp
+    IPAddressV6.cpp
+    json.cpp
+    LifoSem.cpp
+    MacAddress.cpp
+    Malloc.cpp
+    Random.cpp
+    Range.cpp
+    #    Singleton.cpp
+    SocketAddress.cpp
+    SpookyHashV1.cpp
+    SpookyHashV2.cpp
+    StringBase.cpp
+    String.cpp
+    TestUtil.cpp
+    Unicode.cpp
+    Uri.cpp
+    build/EscapeTables.cpp
+    build/FormatTables.cpp
+    build/GroupVarintTables.cpp
+    detail/CacheLocality.cpp
+    detail/Clock.cpp
+    detail/FunctionalExcept.cpp
+    detail/Futex.cpp
+    detail/MallocImpl.cpp
+    detail/MemoryIdler.cpp
+)
+add_library(folly_base OBJECT ${FOLLY_BASE_SRCS})
+
+
+install(FILES
+    ApplyTuple.h
+    AtomicLinkedList.h
+    AtomicStruct.h
+    Baton.h
+    Benchmark.h
+    Bits.h
+    Conv.h
+    CPortability.h
+    CpuId.h
+    Demangle.h
+    DynamicConverter.h
+    dynamic.h
+    dynamic-inl.h
+    EvictingCacheMap.h
+    Exception.h
+    ExceptionWrapper.h
+    Executor.h
+    File.h
+    FileUtil.h
+    Foreach.h
+    FormatArg.h
+    Format.h
+    Format-inl.h
+    FormatTraits.h
+    GroupVarint.h
+    Hash.h
+    IndexedMemPool.h
+    IntrusiveList.h
+    IPAddressException.h
+    IPAddress.h
+    IPAddressV4.h
+    IPAddressV6.h
+    json.h
+    LifoSem.h
+    Likely.h
+    Logging.h
+    MacAddress.h
+    Malloc.h
+    MapUtil.h
+    Memory.h
+    Merge.h
+    MicroSpinLock.h
+    MoveWrapper.h
+    MPMCQueue.h
+    Optional.h
+    PicoSpinLock.h
+    Portability.h
+    Preprocessor.h
+    Random.h
+    Random-inl.h
+    Range.h
+    RWSpinLock.h
+    ScopeGuard.h
+    #    Singleton.h
+    #    Singleton-inl.h
+    SmallLocks.h
+    SocketAddress.h
+    SpinLock.h
+    SpookyHashV1.h
+    SpookyHashV2.h
+    String.h
+    String-inl.h
+    Synchronized.h
+    TestUtil.h
+    ThreadLocal.h
+    ThreadName.h
+    Traits.h
+    Unicode.h
+    Uri.h
+    Uri-inl.h
+    Varint.h
+    folly-config.h
+    DESTINATION include/folly
+)
+install(FILES
+    detail/BitIteratorDetail.h
+    detail/BitsDetail.h
+    detail/CacheLocality.h
+    detail/Clock.h
+    detail/ExceptionWrapper.h
+    detail/FileUtilDetail.h
+    detail/FunctionalExcept.h
+    detail/Futex.h
+    detail/GroupVarintDetail.h
+    detail/IPAddress.h
+    detail/Malloc.h
+    detail/MemoryIdler.h
+    detail/Sleeper.h
+    detail/SpinLockImpl.h
+    detail/ThreadLocalDetail.h
+    detail/UncaughtExceptionCounter.h
+    DESTINATION include/folly/detail
+)
+
